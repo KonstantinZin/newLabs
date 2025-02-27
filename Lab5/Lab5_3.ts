@@ -1,0 +1,15 @@
+function writeStr(str: string): () => void {
+  
+    return function() {
+      console.log(str);
+    };
+  }
+  
+  const str = writeStr("String0");
+  
+  str(); 
+  
+  const strAgain = writeStr("String0");
+  strAgain(); 
+
+  str(); 
